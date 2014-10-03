@@ -12,4 +12,13 @@ $(document).ready( function (){
     	$('#tweet-controls').show();
     });
 
+    $('.tweet-compose').keypress(function() {
+        var charCount = 139 - $('.tweet-compose').val().length;
+        $('#char-count').html(charCount);
+    });
+
 });
+
+// $("tweet-compose").on('click', function() {
+// 	$(this).height(66);
+// });
